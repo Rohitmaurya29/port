@@ -1,0 +1,150 @@
+.App {
+  text-align: center;
+  overflow-x: hidden;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+Table, tr,td{
+  border:2px solid white;
+  border-collapse: collapse;
+}
+
+.eduImg{
+  height:320px;
+  object-fit: contain;
+  width:100%;
+  margin:0
+}
+
+.card-shadow {
+  box-shadow: 0 4px 20px rgba(255, 255, 255, 0.2); 
+  transition: box-shadow 0.3s ease;
+}
+
+.card-shadow:hover {
+  box-shadow: 0 8px 30px rgba(255, 255, 255, 0.4); 
+}
+
+.header{
+  position: fixed;
+  z-index:1000;
+  width:100%;
+  /* overflow-x: hidden; */
+  left:0;
+  right:0
+}
+
+
+
+.projectContainer {
+  position: relative;
+  overflow: hidden; /* Prevents overflow of text outside the image */
+}
+
+.projectImage {
+  min-height: 250px;
+  background-size: contain;
+  background-position: center;
+  width: 100%;
+  transition: opacity 0.5s ease; /* Smooth transition for opacity */
+  position: relative;
+  opacity: 1; /* Full opacity */
+  background-repeat: no-repeat;
+}
+
+.projectImage:hover {
+  opacity: 0.5; /* Reduce opacity on hover */
+}
+
+.projectInfo {
+  position: absolute; /* Position text on top of image */
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Adjust to center */
+  color:chocolate;
+  text-align: center;
+  opacity: 0; /* Start hidden */
+  transition: opacity 0.5s ease; /* Smooth transition for text */
+}
+
+.projectContainer:hover .projectInfo {
+  opacity: 1; /* Show text on hover */
+}
+
+/* .expBody{
+  
+  opacity:0;
+  height:0;
+  transition: opacity 1s ease, height 1s ease;
+  border-radius: 10px;
+
+}
+
+.expCard:hover .expBody{
+  opacity:1;
+  height:auto
+} */
+
+@media (max-width: 768px) {
+  .table-responsive {
+      margin-top: 20px;
+  }
+
+  table {
+      font-size: 12px;
+  }
+}
+
+.contactinput{
+  background-color:grey;
+}
+
+.contactinput:hover{
+  background-color: "white";
+  color:black
+}

@@ -360,7 +360,7 @@ router.delete("/experiencedelete/:id", (req,res)=>{
 router.post('/adminlogin', (req,res)=>{
   const {username, password}= req.body;
   if(username === process.env.USERNAME && password === process.env.PASSWORD){
-    const token = jwt.sign({username}, process.env.USERNAME, {expiresIn:"1h"});
+    const token = jwt.sign({username}, process.env.USERNAME);
     res.json({token});
   }else{
     res.status(401).send("Invalid credentials");
